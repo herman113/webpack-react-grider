@@ -3,9 +3,6 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 import Home from './components/Home';
 import ArtistMain from './components/artists/ArtistMain';
-import ArtistDetail from './components/artists/ArtistDetail';
-import ArtistCreate from './components/artists/ArtistCreate';
-import ArtistEdit from './components/artists/ArtistEdit';
 
 const componentRoutes = {
   component: Home,
