@@ -13,7 +13,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].[chunkhash].js'
   },
   module: {
     rules: [
@@ -30,7 +30,7 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor'
+      names: ['vendor', 'manifest']
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
@@ -39,3 +39,10 @@ module.exports = {
 };
 
 //36 HtmlWebpackPlugin updates index.html to be a template and updates script tags
+
+/*  37 chunk hashing and cash busting 
+      filename: '[name].[chunkhash].js'
+        will hash the bundle or vendor files in /dist
+      names: ['vendor', 'manifest']
+        will prevent vendor from updating if only bundle was modified
+*/
