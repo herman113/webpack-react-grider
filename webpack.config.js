@@ -37,3 +37,5 @@ module.exports = {
     })
   ]
 };
+
+//36 HtmlWebpackPlugin updates index.html to be a template and updates script tags
