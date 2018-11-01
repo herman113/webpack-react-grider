@@ -49,3 +49,7 @@ module.exports = {
       names: ['vendor', 'manifest']
         will prevent vendor from updating if only bundle was modified
 */
+
+/* 47 deploy with github pages 
+     https://herman113.github.io/webpack-react-grider/#/
+*/
